@@ -1,0 +1,19 @@
+<div class="list">
+    <div class="articles">
+        <div class="entry" *ngFor="let item of list">
+            <h2>
+                <a href="javascript:;" (click)="onView($event, item.alias);">{{item.title}}</a>
+            </h2>
+            <div class="info">
+                <div class="update">updated at {{item.update | date}}</div>
+            </div>
+            <div class="summary">
+                {{item.summary}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="previousPage || nextPage" class="pagination">
+        <a *ngIf="previousPage" href="javascript:;" (click)="onPagination($event, previousPage);">Previous</a>
+        <a *ngIf="nextPage" href="javascript:;" (click)="onPagination($event, nextPage);">Next</a>
+    </div>
+</div>

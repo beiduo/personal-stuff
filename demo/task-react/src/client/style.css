@@ -1,0 +1,489 @@
+/*==== RESET & FONTS ====*/
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+}
+
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  line-height: 150%;
+} 
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+body, button, input, select, textarea {
+  font: 300 1em/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+blockquote {
+  position: relative;
+  color: #999;
+  font-weight: 400;
+  border-left: 1px solid #1abc9c;
+  padding-left: 1em;
+  margin: 1em 3em 1em 2em;
+}
+
+@media only screen and ( max-width: 640px ) {
+  blockquote {
+    margin: 1em 0;
+  }
+}
+
+acronym, abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+}
+
+abbr {
+  cursor: help;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+caption, th {
+  text-align: left;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+:root sub, :root sup {
+  vertical-align: baseline; /* for ie9 and other modern browsers */
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+ins, a {
+  text-decoration: none;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+mark {
+  background: #fffdd1;
+  border-bottom: 1px solid #ffedce;
+  padding: 2px;
+  margin: 0 5px;
+}
+
+pre, code, pre tt {
+  font-family: Courier, 'Courier New', monospace;
+}
+
+pre {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 1em 1.5em;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 0.8em;
+  height: 10px;
+}
+
+small,
+figcaption {
+  font-size: 0.9em;
+  color: #888;
+}
+
+strong, b {
+  font-weight: bold;
+  color: #000;
+}
+
+/* 可拖动文件添加拖动手势 */
+[draggable] {
+  cursor: move;
+}
+
+.serif {
+  font-family: Palatino, Optima, Georgia, serif;
+}
+
+/* ul,ol,table inside article revert to basic styles */
+
+article ul {
+  margin-left: 1.3em;
+  list-style: disc;
+}
+
+article ol {
+  list-style: decimal;
+  margin-left: 1.9em;
+}
+
+article li ul, article li ol {
+  margin-bottom: 0.8em;
+  margin-left: 2em;
+}
+
+article li ul {
+  list-style: circle;
+}
+
+article table th, article table td, article table caption {
+  border: 1px solid #ddd;
+  padding: 0.5em 1em;
+  color: #666;
+}
+
+article table th {
+  background: #fbfbfb;
+}
+
+article table thead th {
+  background: #f1f1f1;
+}
+
+article table caption {
+  border-bottom: none;
+}
+
+
+/*==== CLEARFIX ====*/
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #eee;
+  min-width: 320px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #000;
+}
+
+/*body * {
+  font-size: 100%;
+}*/
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.iconwrap {
+  display: none;
+}
+
+.content svg.icon {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3em;
+  fill: #999;
+  vertical-align: middle;
+}
+
+.sitenav {
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.8rem;
+  background: #333;
+}
+
+.sitenav a {
+  display: inline-block;
+  border: transparent solid;
+  border-width: 0.2rem 0;
+  padding: 0.6rem 0;
+  color: #999;
+}
+
+.sitenav a.current {
+  color: #fff;
+  border-bottom-color: #ccc;
+}
+
+.sitenav svg.icon {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.3em;
+  fill: #999;
+  vertical-align: middle;
+}
+
+.sitenav a.current svg.icon {
+  fill: #fff;
+}
+
+.sitenav .main {
+  flex: 2;
+  -webkit-flex: 2;
+}
+
+.sitenav .sub {
+  flex: 1;
+  -webkit-flex: 1;
+  text-align: right;
+}
+
+.sitenav .main a {
+  margin-right: 2rem;
+}
+
+.sitenav .sub a {
+  margin-left: 2rem;
+}
+
+.content {
+  box-sizing: border-box;
+  padding-top: 5rem;
+}
+
+.content > ul,
+.createform,
+.nodata {
+  padding: 2rem;
+}
+
+.content > ul > li {
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  background: #fff;
+  box-shadow: 1px 1px 3px #ccc;
+}
+
+.content > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.task-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 0 2em;
+  line-height: 1.7em;
+}
+
+.content > ul > li .time {
+  padding: 0.8em;
+  background: #f0f0f0;
+  border-bottom: #ececec 1px solid;
+  box-shadow: 0 0 1px #ccc;
+  font-size: 1.0rem;
+  color: #999;
+  text-align: center;
+}
+
+.content > ul > li .error {
+  border-bottom: #fec 1px dashed;
+  background: #ffe;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.7em;
+  color: #f90;
+}
+
+.operator {
+  display: flex;
+  display: -webkit-flex;
+  padding: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.operator a {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  background: #ececec;
+  border-radius: 0.3rem;
+}
+
+.operator .edit {
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.operator .extra {
+  flex: 1;
+  -webkit-flex: 1;
+  text-align: right;
+}
+
+.operator .edit a {
+  margin-right: 1rem;
+}
+
+.operator .extra a {
+  margin-left: 1rem;
+}
+
+.task-edit {
+  box-sizing: border-box;
+  padding: 2em 2em 1em;
+}
+
+.task-edit textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5em;
+  border: none;
+  border-radius: 0.3rem;
+  background: #ececec;
+  font-size: 1.6rem;
+}
+
+.createform textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5em;
+  border: none;
+  border-radius: 0.3rem;
+  background: #fff;
+  font-size: 1.6rem;
+}
+
+.createform button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 1em;
+  background: #ccc;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.createform button:hover,
+.createform button:active {
+  background: #999;
+}
+
+.nodata {
+  text-align: center;
+  padding-top: 8em;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.nodata svg.icon {
+  fill: #ccc;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 10px;
+}
+
+/*==== LANDSCAPE ====*/
+
+@media screen and (orientation:landscape) {
+  .sitenav {
+    left: 0;
+    top: 0;
+    display: block;
+    width: 20%;
+    height: 100%;
+    padding: 0
+    
+  }
+  .content {
+    padding-top: 0;
+    padding-left: 20%;
+  }
+
+  .sitenav a {
+    display: block;
+    padding: 0.5em 1em;
+    border-width: 0 0.5rem 0 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: right;
+  }
+
+  .sitenav a.current {
+    border-color: #ccc;
+  }
+
+  .sitenav .main {
+    padding-top: 1em;
+  }
+
+  .sitenav .sub {
+    position: absolute;
+    width: 100%;
+    bottom: 1em;
+    left: 0;
+  }
+}

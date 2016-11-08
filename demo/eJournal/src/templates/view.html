@@ -1,0 +1,12 @@
+<article>
+    <h1>{{journal.title}}</h1>
+    <div *ngIf="isSaved">Modified successfully</div>
+    <div class="info">
+        <div class="update">updated at {{journal.update | date}}</div>
+        <div class="operator">
+            <a href="javascript:;" (click)="onEdit($event);">Edit</a>
+            <a href="javascript:;" (click)="onDelete($event);">Delete</a>
+        </div>
+    </div>
+    <div class="content" [innerHTML]="journal.content"></div>
+</article>

@@ -1,0 +1,19 @@
+<div class="editform">
+    <div class="editor">
+        <div class="field-title">
+            <input [(ngModel)]="journal.title" placeholder="Title" />
+        </div>
+        <div class="field-content">
+            <textarea [(ngModel)]="journal.content" placeholder="support markdown format"></textarea>
+        </div>
+        <div class="field-alias">
+            <input [(ngModel)]="journal.alias" placeholder="alias, used as file name." />
+        </div>
+    </div>
+    <div class="operator">
+        <a href="javascript:;" (click)="onCancel($event);">Cancel</a>
+        <a href="javascript:;" (click)="onSave($event);">
+            {{isEditing ? 'Save' : 'Create'}}
+        </a>
+    </div>
+</div>
